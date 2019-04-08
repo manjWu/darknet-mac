@@ -1,6 +1,13 @@
 from ctypes import *
 import math
 import random
+# add
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+import colorsys
+
+# box colors
+box_colors = None
 
 def sample(probs):
     s = sum(probs)
@@ -45,7 +52,7 @@ class METADATA(Structure):
     
 
 #lib = CDLL("/home/pjreddie/documents/darknet/libdarknet.so", RTLD_GLOBAL)
-lib = CDLL("libdarknet.so", RTLD_GLOBAL)
+lib = CDLL("../libdarknet.so", RTLD_GLOBAL)
 lib.network_width.argtypes = [c_void_p]
 lib.network_width.restype = c_int
 lib.network_height.argtypes = [c_void_p]
@@ -114,6 +121,84 @@ predict_image = lib.network_predict_image
 predict_image.argtypes = [c_void_p, IMAGE]
 predict_image.restype = POINTER(c_float)
 
+def generate_colors(num_classes):
+    global box_colors
+
+    if box_colors != None and len(box_colors) > num_classes:
+        return box_colors
+
+    hsv_tuples = [(x / num_classes, 1., 1.) for x in range(num_classes)]
+    box_colors = list(map(lambda x: colorsys.hsv_to_rgb(*x), hsv_tuples))
+    box_colors = list(
+        map(lambda x: (int(x[0] * 255), int(x[1] * 255), int(x[2] * 255)),
+            box_colors))
+    random.seed(10101)  # Fixed seed for consistent colors across runs.
+    # Shuffle colors to decorrelate adjacent classes.
+    random.shuffle(box_colors)
+    random.seed(None)  # Reset seed to default.
+
+
+def draw_boxes(img, result):
+
+    image = Image.fromarray(img)
+
+    font = ImageFont.truetype(font='font/FiraMono-Medium.otf', size=20)
+    thickness = (image.size[0] + image.size[1]) // 300
+
+    num_classes = len(result)
+    generate_colors(num_classes)
+
+    index = 0
+    for objection in result:
+        index += 1
+        class_name, class_score, (x, y, w, h) = objection
+        # print(name, score, x, y, w, h)
+
+        left = int(x - w / 2)
+        right = int(x + w / 2)
+        top = int(y - h / 2)
+        bottom = int(y + h / 2)
+
+        label = '{} {:.2f}'.format(class_name.decode('utf-8'), class_score)
+
+        draw = ImageDraw.Draw(image)
+        label_size = draw.textsize(label, font)
+
+        top = max(0, np.floor(top + 0.5).astype('int32'))
+        left = max(0, np.floor(left + 0.5).astype('int32'))
+        bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
+        right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
+        print(label, (left, top), (right, bottom))
+
+        if top - label_size[1] >= 0:
+            text_origin = np.array([left, top - label_size[1]])
+        else:
+            text_origin = np.array([left, top + 1])
+
+        for i in range(thickness):
+            draw.rectangle([left + i, top + i, right - i,
+                            bottom - i], outline=box_colors[index - 1])
+        draw.rectangle(
+            [tuple(text_origin), tuple(text_origin + label_size)],
+            fill=box_colors[index - 1])
+        draw.text(text_origin, label, fill=(255, 255, 255), font=font)
+        del draw
+
+    return np.array(image)
+
+def array_to_image(arr):
+    # need to return old values to avoid python freeing memory
+    arr = arr.transpose(2, 0, 1)
+    c = arr.shape[0]
+    h = arr.shape[1]
+    w = arr.shape[2]
+    #arr = (arr / 255.0).flatten()
+    #data = dn.c_array(dn.c_float, arr)
+    arr = np.ascontiguousarray(arr.flat, dtype=np.float32) / 255.0
+    data = arr.ctypes.data_as(POINTER(c_float))
+    im = IMAGE(w, h, c, data)
+    return im,arr
+
 def classify(net, meta, im):
     out = predict_image(net, im)
     res = []
@@ -141,6 +226,8 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     free_image(im)
     free_detections(dets, num)
     return res
+
+
     
 if __name__ == "__main__":
     #net = load_net("cfg/densenet201.cfg", "/home/pjreddie/trained/densenet201.weights", 0)
@@ -151,6 +238,6 @@ if __name__ == "__main__":
     net = load_net("cfg/tiny-yolo.cfg", "tiny-yolo.weights", 0)
     meta = load_meta("cfg/coco.data")
     r = detect(net, meta, "data/dog.jpg")
-    print r
+    print(r)
     
 
