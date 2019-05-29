@@ -36,7 +36,7 @@ def detect2(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
 
 import sys
 import os
-sys.path.append(os.path.join(os.getcwd(), 'python/'))
+# sys.path.append(os.path.join(os.getcwd(), 'python/'))
 
 import darknet as dn
 

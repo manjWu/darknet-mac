@@ -1,0 +1,320 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"file",
+				"filetype"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"pro",
+				"proposals"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"video",
+				"videoname"
+			],
+			[
+				"fi",
+				"find_line"
+			],
+			[
+				"fil",
+				"filename1"
+			],
+			[
+				"data",
+				"data_train"
+			],
+			[
+				"dir",
+				"dirname"
+			],
+			[
+				"w",
+				"weight"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/python3.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/wumanjia/code/darknet-mac/python/darknet.py",
+		"/Users/wumanjia/code/darknet-mac/examples/darknet.c",
+		"/Users/wumanjia/code/darknet-mac/examples/detector.c",
+		"/Users/wumanjia/code/darknet-mac/src/option_list.c",
+		"/Users/wumanjia/code/darknet-mac/examples/attention.c",
+		"/Users/wumanjia/code/darknet-mac/LICENSE",
+		"/Users/wumanjia/code/darknet-mac/HIK_ipcamera.py",
+		"/Users/wumanjia/c++/darknet-mac/detector-scipy-opencv.py",
+		"/Users/wumanjia/c++/darknet-mac/python/darknet.py",
+		"/Users/wumanjia/c++/darknet-mac/test.py",
+		"/Users/wumanjia/c++/darknet/visualization/Region Avg IOU.png",
+		"/Users/wumanjia/c++/darknet/drone/yolov3-drone1.cfg",
+		"/Users/wumanjia/c++/darknet/drone/drone1.data",
+		"/Users/wumanjia/Desktop/untitled.py",
+		"/Users/wumanjia/c++/darknet/cfg/yolov2-tiny-voc.cfg",
+		"/Users/wumanjia/c++/darknet/HR_tiny/resnet101_HR.cfg",
+		"/Users/wumanjia/c++/darknet/HR_tiny/resnet101.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/yolov3-spp.cfg",
+		"/Users/wumanjia/c++/darknet/dataprocession/smallobject.py",
+		"/Users/wumanjia/c++/darknet/cfg/yolov3.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/yolov3-voc.cfg",
+		"/Users/wumanjia/c++/darknet/visualization/train_loss_visualization.py",
+		"/Users/wumanjia/c++/darknet/visualization/extract_log.py",
+		"/Users/wumanjia/c++/darknet/visualization/train_iou_visualization.py",
+		"/Users/wumanjia/c++/darknet/drone/yolov3-drone.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/tiny-yolo.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/resnet50.cfg",
+		"/Users/wumanjia/c++/darknet/Makefile",
+		"/Users/wumanjia/c++/darknet/drone/yolov3-drone480.cfg",
+		"/Users/wumanjia/c++/darknet/drone/yolov3-drone448.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/resnext152-32x4d.cfg",
+		"/Users/wumanjia/c++/darknet/drone/drone.data",
+		"/Users/wumanjia/c++/darknet/cfg/rnn.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/darknet19_448.cfg",
+		"/Users/wumanjia/c++/darknet/cfg/yolov2.cfg",
+		"/Users/wumanjia/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/resnext101-32x4d.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/ResNet101.pdf",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/yolov3-spp.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/yolov3.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/yolov3-voc.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/yolov3-openimages.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/writing.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/yolov3-tiny.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/resnet152.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/cfg/resnet101.cfg",
+		"/Users/wumanjia/c++/darknet-tiny/examples/darknet.c",
+		"/Users/wumanjia/c++/darknet-tiny/examples/darknet-tiny.sublime-project",
+		"/Users/wumanjia/Desktop/untitled.c",
+		"/Users/wumanjia/Library/Application Support/Sublime Text 2/Packages/User/CTags.sublime-settings",
+		"/Users/wumanjia/Library/Application Support/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
+		"/Users/wumanjia/c++/darknet-tiny/src/network.c",
+		"/Users/wumanjia/c++/darknet-tiny/src/cuda.c",
+		"/Users/wumanjia/c++/darknet-tiny/examples/coco.c",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/8_emptytxt.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/test.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/7_xml.py",
+		"/Users/wumanjia/c++/darknet/src/detector.c",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/5_mat_yolo.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/pandas/_libs/parsers.pyx",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/1_rename_file2.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/0_saveframe.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/3_voc_label.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/1_rename_file.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/test_cb.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/2_listname_yolo.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/precision_recall.py",
+		"/Users/wumanjia/Desktop/author/templates/mobility.bib",
+		"/Users/wumanjia/Desktop/readme.txt",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/yolo_dataset.sublime-project",
+		"/Users/wumanjia/.pyenv/versions/anaconda3-5.0.1/lib/python3.6/encodings/ascii.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/test2.py",
+		"/Users/wumanjia/PycharmProjects/yolo_dataset/5_mat_yolo",
+		"/Users/wumanjia/Library/Application Support/Sublime Text 2/Packages/User/python3.sublime-build",
+		"/Users/wumanjia/PycharmProjects/labelImg-master/labelImg.py",
+		"/Users/wumanjia/PycharmProjects/cp_白夜行.txt",
+		"/Volumes/Machsion HD/毕业设计汇总/0 bicycle/7_kmeans.py",
+		"/Volumes/Machsion HD/毕业设计汇总/0 bicycle/8_figure.py",
+		"/Volumes/Machsion HD/毕业设计汇总/0 bicycle/ch.py",
+		"/Volumes/Machsion HD/毕业设计汇总/0 bicycle/data_3day.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/wumanjia/code/darknet-mac",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"test_detector",
+			"test_dector",
+			"read_cfg",
+			"read_data_cfg",
+			"get_metadata",
+			"set_gpu",
+			"set",
+			"array_to_image",
+			"load_image",
+			"colorsys",
+			"box_colors",
+			"generate_colors",
+			"Image",
+			"predict_image",
+			"array_to_image",
+			"dn.detect",
+			"gpu",
+			"imshow",
+			"i ma sho w",
+			"small",
+			"[upsample]",
+			"filename",
+			"-1,",
+			"up",
+			"layers = -1, 36",
+			"main",
+			"mai n",
+			"max",
+			"[res]",
+			"res",
+			"subdivisions",
+			"main",
+			"shortcut",
+			" shortcut",
+			" 4",
+			"conv",
+			"avg",
+			"route",
+			"upsample",
+			"conv 3",
+			"conv",
+			"main",
+			"max_pooling2x2",
+			"\\w",
+			"stride",
+			"thresh",
+			"xmltxt",
+			"sort",
+			"goog'l'r",
+			"font.family",
+			"ch",
+			"append",
+			"[]",
+			"append"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 178.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true
+}

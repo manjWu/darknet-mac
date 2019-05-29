@@ -11,7 +11,7 @@
 
 import cv2
 
-cam = cv2.VideoCapture("rtsp://admin:nesc518518@10.15.90.64:554/h264/ch1/sub/av_stream")
+cam = cv2.VideoCapture("rtsp://admin:nesc518518@10.15.90.65:554/h264/ch1/sub/av_stream")
 # cam = cv2.VideoCapture("rtsp://admin:nesc518518@10.15.90.64:554/Streaming/Channels/101")
 while True:
     ret, frame = cam.read()
